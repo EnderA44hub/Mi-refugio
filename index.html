@@ -3,9 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mi Refugio ❤️</title>
+  <title>Mi Refugio</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Estilos para la sección de música con YouTube */
+    .musica {
+      margin: 40px auto;
+      text-align: center;
+      padding: 20px;
+      max-width: 600px;
+    }
+    .musica h2 {
+      margin-bottom: 15px;
+      color: #ff6b6b;
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.2em;
+    }
+    .youtube-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      margin-top: 15px;
+    }
+    .youtube-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .play-btn {
+      background: #ff6b6b;
+      color: white;
+      border: none;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      font-size: 2em;
+      cursor: pointer;
+      margin: 20px auto;
+      display: block;
+      transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    }
+    .play-btn:hover {
+      background: #ff8787;
+      transform: scale(1.1);
+    }
+    .play-btn:active {
+      transform: scale(0.95);
+    }
+    .nota {
+      font-size: 0.9em;
+      color: #ccc;
+      margin-top: 10px;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -18,73 +77,112 @@
       <h2>Queridos Primos y Hermana,</h2>
       <p>
         Estos son los 38 principios que han guiado mi camino.  
-        No son solo palabras: son **semillas de grandeza** que planté en mí y ahora comparto con ustedes.  
+        No son solo palabras: son <strong>semillas de grandeza</strong> que planté en mí y ahora comparto con ustedes.  
         Léelos cuando necesiten fuerza. Recuérdenlos cuando duden. Vivanlos cada día.
       </p>
 
       <div class="principios">
         <ol>
           <li>Tu punto de partida en la vida, no dicta el final.</li>
-<li>La suerte no es azar, se planea y diseña.</li>
-<li>Cielo e Infierno.</li>
-<li>Hazlo de una vez.</li>
-<li>Compite con determinación.</li>
-<li>Intentarlo crea oportunidades.</li>
-<li>Mantén perspectiva optimista incluso en tiempos de dificultad.</li>
-<li>Los Ganadores nunca abandonan, los que abandonan nunca ganan.</li>
-<li>Cree en ti.</li>
-<li>Sé leal contigo mismo, no se negocia.</li>
-<li>Priorízate y controla tu destino.</li>
-<li>Haz dinero y ten metas, el éxito es para quien busca oportunidades.</li>
-<li>Nada es gratis, tener éxito exige trabajo.</li>
-<li>Liderazgo afectivo.</li>
-<li>Riqueza es producto de persistencia.</li>
-<li>Sin excusas.</li>
-<li>Las semillas del éxito están en tus manos.</li>
-<li>Tienes derecho a ser rico.</li>
-<li>Riqueza es directamente proporcional al tamaño de tus metas.</li>
-<li>Toma riesgos para tener oportunidades.</li>
-<li>La crítica alimenta la motivación.</li>
-<li>Usa tu fuerza para intimidar a tus rivales.</li>
-<li>Trata a los demás de la manera que te gustaría ser tratado.</li>
-<li>Grandes pensamientos = Grandes logros.</li>
-<li>Cada centavo debe trabajar para ti, no lo contrario.</li>
-<li>Impulso es siempre nuestro peor enemigo.</li>
-<li>El Dios de la suerte ama a los valientes.</li>
-<li>Cree de verdad en ti y encontrarás tu camino.</li>
-<li>Cada final es un nuevo comienzo.</li>
-<li>Los que dudan de ti reflejan sus propias limitaciones.</li>
-<li>Propósito es todo.</li>
-<li>Evita culpar y dar excusas.</li>
-<li>Aprovecha la sabiduría de todos.</li>
-<li>Piensa estratégicamente.</li>
-<li>Pon primero a los tuyos.</li>
-<li>Más riqueza = Más responsabilidad.</li>
-<li>Enriquece tu mente.</li>
-<li>Cualquiera puede ser grande.</li>
+          <li>La suerte no es azar, se planea y diseña.</li>
+          <li>Cielo e Infierno.</li>
+          <li>Hazlo de una vez.</li>
+          <li>Compite con determinación.</li>
+          <li>Intentarlo crea oportunidades.</li>
+          <li>Mantén perspectiva optimista incluso en tiempos de dificultad.</li>
+          <li>Los Ganadores nunca abandonan, los que abandonan nunca ganan.</li>
+          <li>Cree en ti.</li>
+          <li>Sé leal contigo mismo, no se negocia.</li>
+          <li>Priorízate y controla tu destino.</li>
+          <li>Haz dinero y ten metas, el éxito es para quien busca oportunidades.</li>
+          <li>Nada es gratis, tener éxito exige trabajo.</li>
+          <li>Liderazgo afectivo.</li>
+          <li>Riqueza es producto de persistencia.</li>
+          <li>Sin excusas.</li>
+          <li>Las semillas del éxito están en tus manos.</li>
+          <li>Tienes derecho a ser rico.</li>
+          <li>Riqueza es directamente proporcional al tamaño de tus metas.</li>
+          <li>Toma riesgos para tener oportunidades.</li>
+          <li>La crítica alimenta la motivación.</li>
+          <li>Usa tu fuerza para intimidar a tus rivales.</li>
+          <li>Trata a los demás de la manera que te gustaría ser tratado.</li>
+          <li>Grandes pensamientos = Grandes logros.</li>
+          <li>Cada centavo debe trabajar para ti, no lo contrario.</li>
+          <li>Impulso es siempre nuestro peor enemigo.</li>
+          <li>El Dios de la suerte ama a los valientes.</li>
+          <li>Cree de verdad en ti y encontrarás tu camino.</li>
+          <li>Cada final es un nuevo comienzo.</li>
+          <li>Los que dudan de ti reflejan sus propias limitaciones.</li>
+          <li>Propósito es todo.</li>
+          <li>Evita culpar y dar excusas.</li>
+          <li>Aprovecha la sabiduría de todos.</li>
+          <li>Piensa estratégicamente.</li>
+          <li>Pon primero a los tuyos.</li>
+          <li>Más riqueza = Más responsabilidad.</li>
+          <li>Enriquece tu mente.</li>
+          <li>Cualquiera puede ser grande.</li>
         </ol>
       </div>
 
       <p class="firma"><strong>— Ender A.</strong></p>
     </section>
 
-    <section class="fotos">
-      <h2>Nuestros Recuerdos</h2>
-      <div class="galeria">
-        <img src="https://via.placeholder.com/300x200?text=Foto+1" alt="Recuerdo 1" />
-        <img src="https://via.placeholder.com/300x200?text=Foto+2" alt="Recuerdo 2" />
-        <img src="https://via.placeholder.com/300x200?text=Foto+3" alt="Recuerdo 3" />
+    <!-- SECCIÓN DE MÚSICA CON YOUTUBE -->
+    <section class="musica">
+      <h2>Canción para el Alma</h2>
+      <p style="color: #fff; font-style: italic;">"Fly Me to the Moon" - Frank Sinatra</p>
+      
+      <button class="play-btn" id="playYoutube">Play</button>
+      <p class="nota">Toca para volar con esta clásica</p>
+
+      <div class="youtube-container">
+        <iframe 
+          id="youtubePlayer"
+          src="https://www.youtube.com/embed/Cd_THG241GA?enablejsapi=1&autoplay=0&mute=0&loop=1&playlist=Cd_THG241GA"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
       </div>
-      <p class="nota">Sube tus fotos reales reemplazando estas 😊</p>
     </section>
 
     <footer>
-      <p>Hecho con ❤️ por @EnderA44 | <span id="year"></span></p>
+      <p>Hecho con por @EnderA44 | <span id="year"></span></p>
     </footer>
   </div>
 
+  <!-- API de YouTube -->
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script>
+    // Año automático
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    let player;
+    const playBtn = document.getElementById("playYoutube");
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('youtubePlayer', {
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+
+    function onPlayerReady() {
+      playBtn.addEventListener("click", togglePlay);
+    }
+
+    function onPlayerStateChange(event) {
+      playBtn.textContent = (event.data === 1) ? "Pause" : "Play";
+    }
+
+    function togglePlay() {
+      if (player.getPlayerState() === 1) {
+        player.pauseVideo();
+      } else {
+        player.playVideo();
+      }
+    }
   </script>
 </body>
 </html>
